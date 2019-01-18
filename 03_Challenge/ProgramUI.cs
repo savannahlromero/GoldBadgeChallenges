@@ -56,7 +56,7 @@ namespace _03_Challenge
             Console.WriteLine("Have a lovely day.");
             Console.ReadKey();
         }
-        public void AddEvents()
+        private void AddEvents()
         {
             Console.Clear();
             Event eventName = new Event();
@@ -130,7 +130,7 @@ namespace _03_Challenge
             _repo.AddEventToList(eventName);
 
         }
-        public void ListEvents()
+        private void ListEvents()
         {
             Console.Clear();
             List<Event> eventList = _repo.GetEventList();
@@ -139,14 +139,14 @@ namespace _03_Challenge
                 Console.WriteLine($"Type: {eventName.EventType}\nAttendee Count: {eventName.EventAttendeeCount}\nCost-Per-Person: {eventName.EventCostPerPerson}\nEvent total cost: {eventName.EventTotalCost}\nEvent date: {eventName.EventDate}\n");
             }
         }
-        public void TotalCostAll()
+        private void TotalCostAll()
         {
       
             decimal totalCost = _repo.TotalCostOfAllOutings(true);
 
             Console.WriteLine($"\nThe current total cost of all events is ${totalCost}.");
         }
-        public void TotalCostType()
+        private void TotalCostType()
         {
             EventType calculateType = EventType.Golf;
             Console.WriteLine("What event type would you like to calculate?\n" +
