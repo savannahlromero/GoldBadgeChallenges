@@ -24,6 +24,14 @@ namespace _08_Challenge
             DriverScore = driverScore;
             CostOfPremium = costOfPremium;
         }
+        // The constructor below is for unit test purposes, which will calculate the driver score and premium costs.
+        public Driver(int speedCount, int swerveCount, int rollStopCount, int followCarsCount)
+        {
+            SpeedCount = speedCount;
+            SwerveCount = swerveCount;
+            RollStopCount = rollStopCount;
+            FollowCarsCount = followCarsCount;
+        }
         public Driver()
         {
 

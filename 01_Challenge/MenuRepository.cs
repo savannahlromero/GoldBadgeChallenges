@@ -8,23 +8,23 @@ namespace _01_Challenge
 {
     public class MenuRepository
     {
-        List<Menu> menuList = new List<Menu>();
+        List<Menu> _menuList = new List<Menu>();
 
         public void AddMealToList(Menu meal)
         {
-            menuList.Add(meal);
+            _menuList.Add(meal);
         }
         public List<Menu> GetMealFromList()
         {
-            return menuList;
+            return _menuList;
         }
         public bool RemoveMealFromList(int removeMealNumber)
         {
-            foreach (Menu meal in menuList)
+            foreach (Menu meal in _menuList)
             {
                 if (meal.MealNumber == removeMealNumber)
                 {
-                    menuList.Remove(meal);
+                    _menuList.Remove(meal);
                     return true;
                 }
             }

@@ -65,7 +65,7 @@ namespace _02_Challenge
         {
             Console.Clear();
             Queue<Claim> newQ = _repo.GetQueue();
-            Claim nextClaim = newQ.Peek();
+            Claim  nextClaim = newQ.Peek();
 
             Console.WriteLine($"ClaimID: {nextClaim.ClaimID}\n" +
                 $"Type: {nextClaim.ClaimType}\n" +
@@ -75,9 +75,17 @@ namespace _02_Challenge
                 $"DateOfClaim: {nextClaim.DateOfClaim.ToShortDateString()}\n" +
                 $"IsValid: {nextClaim.IsValid}");
 
+            Console.WriteLine("\nDo you want to deal with this claim now? (y/n)");
+            string claimYN = Console.ReadLine();
+            string claimYesNo = claimYN.ToLower();
 
-
-
+            if (claimYesNo == "y")
+            {
+                _repo.RemoveClaimFromQueue();
+            }
+            else
+            {
+            }
         }
         private void AddAClaim()
         {

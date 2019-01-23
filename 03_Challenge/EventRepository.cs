@@ -8,21 +8,21 @@ namespace _03_Challenge
 {
     public class EventRepository
     {
-        List<Event> eventList = new List<Event>();
+        List<Event> _eventList = new List<Event>();
 
         public void AddEventToList(Event eventName)
         {
-            eventList.Add(eventName);
+            _eventList.Add(eventName);
         }
         public List<Event> GetEventList()
         {
-            return eventList;
+            return _eventList;
         }
         public decimal TotalCostOfAllOutings(bool totalCost)
         {
             decimal totalCostAllOutings = 0;
 
-            foreach(Event eventName in eventList)
+            foreach(Event eventName in _eventList)
             {
                 decimal cost = eventName.EventTotalCost;
                 totalCostAllOutings += cost;
@@ -34,7 +34,7 @@ namespace _03_Challenge
         {
             decimal totalCostPerType = 0;
 
-            foreach(Event eventName in eventList)
+            foreach(Event eventName in _eventList)
             {
                 if (eventName.EventType == eventType)
                 {
