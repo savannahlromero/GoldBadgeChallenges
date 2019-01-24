@@ -9,7 +9,7 @@ namespace _04_Challenge_Tests
     public class BadgeRepository_Tests
     {
         [TestMethod]
-        public void AddToDictionary()
+        public void AddToAndGetDictionary()
         {
             List<string> list = new List<string>();
             BadgeRepository repo = new BadgeRepository();

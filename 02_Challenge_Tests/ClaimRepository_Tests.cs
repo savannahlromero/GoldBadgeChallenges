@@ -8,7 +8,7 @@ namespace _02_Challenge_Tests
     public class ClaimRepository_Tests
     {
         [TestMethod]
-        public void AddToQueue()
+        public void AddToAndGetQueue()
         {
             ClaimRepository repo = new ClaimRepository();
             DateTime incident = new DateTime(2019, 1, 1);
